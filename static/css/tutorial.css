@@ -1,0 +1,10 @@
+#word {
+  width: 600px;
+}
+#button {
+  font-family: Verdana;
+  font-weight: bold;
+  background-color: red;
+  border: 1px solid;
+  border-color: #696 #363 #363 #696;
+}

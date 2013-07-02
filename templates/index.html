@@ -1,0 +1,82 @@
+$def with(allcss,alljs)
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+
+
+<title>Cloud Data Analysis Supermarket</title>
+
+    $for tv in allcss:
+    <link rel="stylesheet" href="/static/css/$:tv" type="text/css"/>
+
+
+</head>
+<body>
+    <h1>Cdasm in build</h1>
+
+
+    <input class="btn5" id="button" type="submit"  value="try"/>
+
+    <div>
+    </div>
+
+    <div id="boxA"
+        ondragenter="dragEnter(event)"
+        ondrop="dragDrop(event)"
+        ondragover="dragOver(event)">
+
+      <div id="drag1" draggable="true"
+            ondragstart="dragStart(event)"
+            ondragend="dragEnd(event)">drag me</div>
+
+      <div id="drag2" draggable="true"
+            ondragstart="dragStart(event)"
+            ondragend="dragEnd(event)">drag me</div>
+
+      <div id="drag3" draggable="true"
+            ondragstart="dragStart(event)"
+            ondragend="dragEnd(event)">drag me</div>
+
+    </div>
+
+    <div id="boxB"
+        ondragenter="dragEnter(event)"
+        ondrop="dragDrop(event)"
+        ondragover="dragOver(event)">
+    </div>
+
+    <div id="boxC"
+        ondragenter="dragEnter(event)"
+        ondrop="dragDrop(event)"
+        ondragover="dragOver(event)">
+    </div>
+
+    <div style="clear:both"></div>
+
+                 <input  type="text" class="word" />
+                 <input class="btn1" id="button" type="submit" value="query"/>
+
+        <ul class="lst">
+        </ul>
+
+    <div class="container">
+    <div id="boxD" class="D">
+    </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+
+     <div class="bcont">
+    <input class="btn2" id="button" type="submit" seldef="1" value="change"/>
+    <input class="btn3" id="button" type="submit" seldef="1" value="add"/>
+    <input class="btn4" id="button" type="submit"  value="remove"/>
+    </div>
+
+
+    $for tv in alljs:
+    <script type="text/javascript" src="/static/js/$tv"></script>
+</body>
+</html>

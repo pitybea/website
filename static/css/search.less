@@ -1,0 +1,190 @@
+@import "allcolors";
+
+@oddcolor: gray;
+@evencolor: #f0f0f0;
+
+@posflagcolor: red;
+@negflagcolor: blue;
+@columnwidth:600px;
+
+@cheight:25px;
+
+@flagwidth:10px;
+
+@namewidth: 170px;
+
+@datewidth: 170px;
+
+@hightlightcolor: yellow;
+
+@negwordcolor: blue;
+@poswordcolor: red;
+
+.textstyle()
+{
+  display: table-cell;
+
+}
+.wordstyle()
+{
+  float: left;
+  margin-left: 5px;
+  height: @cheight;
+  .textstyle;
+}
+#hilightword
+{
+  .wordstyle;
+  background-color: @hightlightcolor;
+}
+
+#normalword
+{
+  .wordstyle;
+}
+#negword
+{
+  .wordstyle;
+//  color: @negwordcolor;
+}
+#posword
+{
+  .wordstyle;
+//  color: @poswordcolor;
+}
+
+
+
+.flagstyle()
+{
+  float: left;
+  width:@flagwidth;
+  height: @cheight;
+}
+
+#posflag
+{
+  background-color: @posflagcolor;
+  .flagstyle;
+}
+#negflag
+{
+  background-color: @negflagcolor;
+  .flagstyle;
+}
+
+.columnstyle()
+{
+
+  //  width: @columnwidth;
+
+  height: 2*@cheight;
+  margin-top: -8px;
+
+};
+
+#oddcolumn
+{
+
+  background-color: @oddcolor;
+  .columnstyle;
+
+
+}
+
+#evencolumn
+{
+
+  background-color: @evencolor;
+  .columnstyle;
+}
+
+#username
+{
+  float: left;
+  width:@namewidth;
+  height: @cheight;
+  margin-left: 20px;
+  .textstyle;
+}
+#date
+{
+  float: left;
+  height: @cheight;
+  width:@datewidth;
+  margin-left: 20px;
+  .textstyle;
+}
+
+#sentence
+{
+  float: left;
+  height: @cheight;
+  margin-left: 40px;
+}
+#lst
+{
+  margin-top: 60px;
+}
+#button {
+  font-family: Verdana;
+  font-weight: bold;
+  border: 1px solid;
+  border-color: #696 #363 #363 #696;
+
+}
+
+
+
+            /* Prevent the text contents of draggable elements from being selectable. */
+        [draggable] {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
+   /* Required to make elements draggable in old WebKit */
+   -khtml-user-drag: element;
+   -webkit-user-drag: element;
+ }
+.column {
+  height: 150px;
+  width: 150px;
+  float: left;
+  border: 2px solid #666666;
+  background-color: #ccc;
+  margin-right: 5px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #000;
+  -ms-box-shadow: inset 0 0 3px #000;
+  box-shadow: inset 0 0 3px #000;
+  text-align: center;
+  cursor: move;
+}
+.column header {
+  color: #fff;
+  text-shadow: #000 0 1px;
+  box-shadow: 5px;
+  padding: 5px;
+  background: -moz-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  background: -webkit-gradient(linear, left top, right top,
+  color-stop(0, rgb(0,0,0)),
+  color-stop(0.50, rgb(79,79,79)),
+  color-stop(1, rgb(21,21,21)));
+  background: -webkit-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  background: -ms-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  border-bottom: 1px solid #ddd;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -ms-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+.column.over {
+  border: 2px dashed #000;
+}
